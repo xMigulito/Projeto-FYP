@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +11,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  final List<String> _listaIcon = <String>['HidePass.png', 'ShowPass.png'];
+  List<String> _listaCateg = ['Teste1', 'Teste2'];
+  final List<String> entries = <String>['A', 'B', 'C'];
+  final List<int> colorCodes = <int>[600, 500, 100];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,57 +65,51 @@ class _HomeState extends State<Home> {
                         width: MediaQuery.of(context).size.width,
                         margin: EdgeInsets.symmetric(horizontal: 5.0),
                         decoration: BoxDecoration(
-                          color: Colors.amber
+                          color: Colors.white,
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 7
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: AssetImage(
+                              i.toString(),
+                            ),
+                            fit: BoxFit.cover,
+                          )
                         ),
-                        child: Image(image: AssetImage(i.toString()), fit: BoxFit.fill,)
+                        child: ElevatedButton(
+                          onPressed: (){
+                          }, 
+                          child: Text(''),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.transparent,
+                            maximumSize: Size(double.maxFinite, double.maxFinite),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12)
+                            ),
+                            elevation: 0,
+                          ),
+                        ),
                       );
                     },
                   );
                 }).toList(),  
               ),
 
-              Padding(
-                padding: EdgeInsets.only(top: 25),
-                child: Card(
-                  child: SizedBox(
-                    width: double.maxFinite,
+              Padding(padding: EdgeInsets.only(top: 100)),
+              ListView.builder(
+                padding: const EdgeInsets.all(8),
+                itemCount: entries.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Container(
                     height: 50,
-                    child: ElevatedButton.icon(
-                      style: ElevatedButton.styleFrom(
-                        alignment: Alignment.centerLeft,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)
-                        )
-                      ),
-                      onPressed: (){}, 
-                      icon: Icon(Icons.abc),
-                      label: Text('test'),
-                    ),
-                  ),
-                ),
-              ),
+                    color: Colors.amber[colorCodes[index]],
+                    child: Center(child: Text('Entry ${entries[index]}')),
+                  );
+                }
+              ) 
 
-              Padding(
-                padding: EdgeInsets.only(top: 25),
-                child: Card(
-                  child: SizedBox(
-                    width: double.maxFinite,
-                    height: 50,
-                    child: ElevatedButton.icon(
-                      style: ElevatedButton.styleFrom(
-                        alignment: Alignment.centerLeft,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)
-                        )
-                      ),
-                      onPressed: (){}, 
-                      icon: Icon(Icons.abc),
-                      label: Text('test'),
-                    ),
-                  ),
-                ),
-              ),
-                
 
             ],
           ),
