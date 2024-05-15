@@ -64,6 +64,11 @@ flutter:
     - images/Logo-Fyp-NoBg.png
     - icons/ShowPass.png
     - icons/HidePass.png
+    - icons/Restaurante.png
+    - icons/EventoPublico.png
+    - icons/Balada.png
+    - icons/Lanchonete.png
+    - icons/Bares.png
     - images/teste1.png
     - images/teste2.png
     - images/teste3.png
