@@ -63,7 +63,7 @@ class _CadastroState extends State<Cadastro> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 50),
+                padding: EdgeInsets.only(top: 30),
                 child: TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: 
@@ -85,7 +85,7 @@ class _CadastroState extends State<Cadastro> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 50),
+                padding: EdgeInsets.only(top: 30),
                 child: TextField(
                   keyboardType: TextInputType.text,
                   decoration: 
@@ -125,7 +125,7 @@ class _CadastroState extends State<Cadastro> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 50),
+                padding: EdgeInsets.only(top: 30),
                 child: TextField(
                   keyboardType: TextInputType.text,
                   decoration: 
@@ -171,18 +171,18 @@ class _CadastroState extends State<Cadastro> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(22, 118, 155, 1), foregroundColor: Colors.white, fixedSize: Size(150, 10)),
+                      style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(22, 118, 155, 1), foregroundColor: Colors.white, fixedSize: Size(170, 20)),
                       onPressed: (){
                         Navigator.pop(context);
                       }, 
-                      child: Text("Salvar")
+                      child: Text("Salvar", style: TextStyle(fontSize: 17),)
                     ),
                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(22, 118, 155, 1), foregroundColor: Colors.white, fixedSize: Size(150, 10)),
+                      style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(22, 118, 155, 1), foregroundColor: Colors.white, fixedSize: Size(170, 20)),
                       onPressed: (){
                         Navigator.pop(context);
                       }, 
-                      child: Text("Cancelar")
+                      child: Text("Cancelar", style: TextStyle(fontSize: 17),)
                     ),
                   ],
                 ),
