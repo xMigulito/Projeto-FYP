@@ -114,22 +114,22 @@ class _LoginState extends State<Login> {
               Padding(
                 padding: EdgeInsets.only(top: 50),
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(22, 118, 155, 1), foregroundColor: Colors.white, fixedSize: Size(150, 10)),
+                  style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(22, 118, 155, 1), foregroundColor: Colors.white, fixedSize: Size(170, 20)),
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
                   }, 
-                  child: Text("Logar")
+                  child: Text("Logar", style: TextStyle(fontSize: 17),)
                 ),
               ),
 
               Padding(
                 padding: EdgeInsets.only(top: 25),
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(22, 118, 155, 1), foregroundColor: Colors.white, fixedSize: Size(150, 10)),
+                  style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(22, 118, 155, 1), foregroundColor: Colors.white, fixedSize: Size(170, 20)),
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => Cadastro()));
                   }, 
-                  child: Text("Registrar")
+                  child: Text("Registrar", style: TextStyle(fontSize: 17),)
                 ),
               ),
 
